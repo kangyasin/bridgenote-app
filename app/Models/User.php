@@ -43,6 +43,6 @@ class User extends Authenticatable
     ];
 
     public function position() {
-        return $this->hasMany(UserPosition::class);
+        return $this->hasOne(UserPosition::class);
     }
 }

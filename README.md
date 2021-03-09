@@ -49,3 +49,10 @@ Mixin script and styles
 npm run dev
 ```
 
+## Loggin In
+Use this credential
+```dotenv
+email: admin@bridgenote.com
+password: admin123
+```
+

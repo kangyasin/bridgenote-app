@@ -6,7 +6,7 @@ All API must use this authentication
 
 Request :
 - Header :
-    - Authorization : "Bearer [your secret api key]"
+    - Authorization : "Bearer [your secret auth key]"
 
 ## Create User Position
 
@@ -37,8 +37,8 @@ Response :
         "user_id" : "integer",
         "position" : "string",
         "status" : "string",
-        "createdAt" : "date",
-        "updatedAt" : "date"
+        "created_at" : "date",
+        "updated_at" : "date"
      }
 }
 ```
@@ -62,8 +62,8 @@ Response :
         "user_id" : "integer",
         "position" : "string",
         "status" : "string",
-        "createdAt" : "date",
-        "updatedAt" : "date"
+        "created_at" : "date",
+        "updated_at" : "date"
      }
 }
 ```
@@ -96,8 +96,8 @@ Response :
         "user_id" : "integer",
         "position" : "string",
         "status" : "string",
-        "createdAt" : "date",
-        "updatedAt" : "date"
+        "created_at" : "date",
+        "updated_at" : "date"
      }
 }
 ```
@@ -125,16 +125,16 @@ Response :
             "user_id" : "integer",
             "position" : "string",
             "status" : "string",
-            "createdAt" : "date",
-            "updatedAt" : "date"
+            "created_at" : "date",
+            "updated_at" : "date"
         },
         {
             "id" : "integer, unique",
             "user_id" : "integer",
             "position" : "string",
             "status" : "string",
-            "createdAt" : "date",
-            "updatedAt" : "date"
+            "created_at" : "date",
+            "updated_at" : "date"
        }
     ]
 }

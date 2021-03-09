@@ -14,40 +14,42 @@
             <table class="table table-hover">
               <thead>
                   <tr>
+                      <th>ID</th>
                       <th>Name</th>
                       <th>Email</th>
                       <th>Position</th>
                       <th>Status</th>
-                      <th>Actions</th>
                   </tr>
               </thead>
               <tbody>
                 @foreach($users as $user)
                     <tr>
+                        <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>Position</td>
-                        <td><span class="badge badge-pill badge-light-primary mr-1">Active</span></td>
+                        @if($user->position)
+                        <td>{{$user->position->position}}</td>
                         <td>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow" data-toggle="dropdown">
-                                    <i data-feather="more-vertical"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);">
-                                        <i data-feather="edit-2" class="mr-50"></i>
-                                        <span>Edit</span>
-                                    </a>
-                                    <a class="dropdown-item" href="javascript:void(0);">
-                                        <i data-feather="trash" class="mr-50"></i>
-                                        <span>Delete</span>
-                                    </a>
-                                </div>
-                            </div>
+                            @if($user->position->isActive())
+                            <span class="badge badge-pill badge-light-primary mr-1">
+                               Active
+                            </span>
+                            @else
+                            <span class="badge badge-pill badge-light-secondary mr-1">
+                               Inactive
+                            </span>
+                            @endif
                         </td>
+                        @else
+                        <td>-</td>
+                        <td>
+                        <span class="badge badge-pill badge-light-secondary mr-1">
+                            Inactive
+                        </span>
+                        </td>
+                        @endif
                     </tr>
                 @endforeach
-
               </tbody>
             </table>
              <div class="d-flex flex-row-reverse">

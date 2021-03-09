@@ -25,7 +25,7 @@ class NewUserPositionRequest extends ApiFormRequest
     public function rules()
     {
         return [
-            'user_id' => 'required|exists:users,id',
+            'user_id' => 'required|exists:users,id|unique:App\Models\UserPosition,user_id',
             'position' => 'required|string|min:3',
             'status' => ['required', Rule::in(['active','inactive'])]
         ];

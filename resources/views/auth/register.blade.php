@@ -90,15 +90,6 @@
               </div>
             </div>
           </div>
-
-          <div class="form-group">
-            <div class="custom-control custom-checkbox">
-              <input class="custom-control-input" type="checkbox" id="register-privacy-policy" tabindex="4" />
-              <label class="custom-control-label" for="register-privacy-policy">
-                I agree to <a href="javascript:void(0);">privacy policy & terms</a>
-              </label>
-            </div>
-          </div>
           <button type="submit" class="btn btn-primary btn-block" tabindex="5">Sign up</button>
         </form>
 

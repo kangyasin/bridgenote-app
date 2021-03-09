@@ -12,7 +12,7 @@ class DashboardController extends Controller
         $breadcrumbs = [
             ['link'=>"home",'name'=>"Home"], ['name'=>"Index"]
         ];
-        $users = User::with('position')->paginate(2);
+        $users = User::with('position')->paginate(5);
         return view('/content/home', ['breadcrumbs' => $breadcrumbs, 'users' => $users] );
     }
 }

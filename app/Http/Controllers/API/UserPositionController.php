@@ -43,7 +43,7 @@ class UserPositionController extends Controller
             $userPosition = UserPosition::create($validateInputs);
             return $this->success($userPosition);
         } catch (ValidationException $validationException) {
-            return $this->error('Oops', 406, $validationException->errors());
+            return $this->error($validationException->getMessage(), 406, $validationException->errors());
         } catch (\Exception $exception) {
             dd($exception);
             return $this->error($exception->getMessage(), $exception->getCode());
@@ -83,7 +83,7 @@ class UserPositionController extends Controller
             $userPosition->update($validateInputs);
             return $this->success($userPosition);
         } catch (ValidationException $validationException) {
-            return $this->error('Oops', 406, $validationException->errors());
+            return $this->error($validationException->getMessage(), 406, $validationException->errors());
         } catch (\Exception $exception) {
             return $this->error();
         }
