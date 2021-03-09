@@ -45,7 +45,6 @@ class UserPositionController extends Controller
         } catch (ValidationException $validationException) {
             return $this->error($validationException->getMessage(), 406, $validationException->errors());
         } catch (\Exception $exception) {
-            dd($exception);
             return $this->error($exception->getMessage(), $exception->getCode());
         }
     }
