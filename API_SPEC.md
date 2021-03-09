@@ -36,6 +36,7 @@ Response :
     },
     "code": "number"
 }
+```
 
 ## Create User Position
 
