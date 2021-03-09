@@ -1,3 +1,7 @@
+## API Spec
+[API Doc](/API_SPEC.md)
+
+
 ## Installation
 
 Copy and paste ```.env.example``` file to the same directory
@@ -54,5 +58,11 @@ Use this credential
 ```dotenv
 email: admin@bridgenote.com
 password: admin123
+```
+
+## Test
+Just run
+```dotenv
+php artisan test
 ```
 
